@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>悟空体育 - 运动与竞技的纯粹入口</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f9fafc;
+      font-family: system-ui, -apple-system, 'Segoe UI', 'PingFang SC', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      color: #1e293b;
+      line-height: 1.7;
+      padding: 0.5rem 1rem;
+    }
+
+    .page {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2.5rem 0 3rem;
+    }
+
+    /* hero */
+    .hero {
+      margin-bottom: 3.5rem;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 2rem;
+    }
+
+    .hero-sup {
+      font-size: 0.8rem;
+      letter-spacing: 0.3px;
+      color: #64748b;
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+      font-weight: 450;
+    }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 550;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      color: #0f172a;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      color: #334155;
+      max-width: 640px;
+    }
+
+    .hero p a {
+      color: #2563eb;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .hero p a:hover {
+      color: #1e40af;
+    }
+
+    /* 优势区 */
+    .advantages {
+      margin-bottom: 3rem;
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      color: #64748b;
+      margin-bottom: 1.2rem;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 1.2rem;
+    }
+
+    .adv-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.8rem;
+    }
+
+    .adv-item {
+      background: #ffffff;
+      padding: 1.2rem 1rem 1rem 0;
+    }
+
+    .adv-item h3 {
+      font-size: 1rem;
+      font-weight: 550;
+      margin-bottom: 0.4rem;
+      color: #0f172a;
+      letter-spacing: -0.01em;
+    }
+
+    .adv-item p {
+      font-size: 0.9rem;
+      color: #475569;
+      line-height: 1.55;
+    }
+
+    /* 说明区 */
+    .explain {
+      margin-bottom: 3rem;
+    }
+
+    .explain h2 {
+      font-size: 1.25rem;
+      font-weight: 520;
+      margin-bottom: 0.8rem;
+      color: #0f172a;
+      border-left: 3px solid #2563eb;
+      padding-left: 1rem;
+    }
+
+    .explain p {
+      margin-bottom: 1.2rem;
+      color: #334155;
+    }
+
+    .explain p a {
+      color: #2563eb;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .explain p a:hover {
+      color: #1e40af;
+    }
+
+    /* FAQ 摘要 */
+    .faq-summary {
+      margin-bottom: 3rem;
+    }
+
+    .faq-summary h2 {
+      font-size: 1.1rem;
+      font-weight: 520;
+      margin-bottom: 1rem;
+      color: #0f172a;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #e9edf2;
+      padding: 0.9rem 0;
+    }
+
+    .faq-question {
+      font-weight: 490;
+      margin-bottom: 0.15rem;
+      color: #1e293b;
+      font-size: 0.95rem;
+    }
+
+    .faq-answer {
+      font-size: 0.9rem;
+      color: #475569;
+      line-height: 1.5;
+    }
+
+    .faq-answer a {
+      color: #2563eb;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .faq-answer a:hover {
+      color: #1e40af;
+    }
+
+    /* 底部链接 */
+    .footer-links {
+      border-top: 1px solid #e2e8f0;
+      padding-top: 1.8rem;
+      margin-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 1.5rem;
+      font-size: 0.9rem;
+      color: #64748b;
+    }
+
+    .footer-links a {
+      color: #1e293b;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: #cbd5e1;
+    }
+
+    .footer-links a:hover {
+      text-decoration-color: #2563eb;
+      color: #2563eb;
+    }
+
+    .footer-meta {
+      margin-top: 0.8rem;
+      font-size: 0.8rem;
+      color: #94a3b8;
+    }
+
+    /* 响应式 */
+    @media (max-width: 500px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      .page {
+        padding: 1.5rem 0 2rem;
+      }
+      .adv-grid {
+        gap: 1rem;
+      }
+      .adv-item {
+        padding: 0.8rem 0 0.5rem 0;
+        border-bottom: 1px solid #f1f5f9;
+      }
+      .footer-links {
+        flex-direction: column;
+        gap: 0.4rem 0;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- hero -->
+  <div class="hero">
+    <div class="hero-sup">一个更纯粹的体育焦点</div>
+    <h1>想快速了解一个体育平台<br>悟空体育或许值得一看</h1>
+    <p>
+      当你打开一个网站，最直观的问题往往是：这里主要提供什么？<a href="https://cns-wukongsport.com">悟空体育</a>给出的回答很直接——围绕体育赛事与运动内容，呈现信息、动态与讨论空间，没有多余干扰。
+    </p>
+  </div>
+
+  <!-- 优势区 -->
+  <div class="advantages">
+    <div class="section-label">三个可关注的方面</div>
+    <div class="adv-grid">
+      <div class="adv-item">
+        <h3>信息密度适中</h3>
+        <p>页面布局干净，重要内容排布清晰，不会让浏览者陷入信息过载的疲惫中。</p>
+      </div>
+      <div class="adv-item">
+        <h3>体育品类覆盖</h3>
+        <p>从主流联赛到小众项目，都有对应的内容板块，方便不同兴趣的用户找到自己关注的领域。</p>
+      </div>
+      <div class="adv-item">
+        <h3>互动氛围自然</h3>
+        <p>讨论区与内容区的界线分明，用户可以在不影响阅读的前提下分享观点。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 说明区：从用户识别角度进一步展开 -->
+  <div class="explain">
+    <h2>这个页面在做什么？</h2>
+    <p>
+      很多时候，我们点开一个网站，只想快速确认两件事：它是不是我想要的类型，以及值不值得花时间浏览。<a href="https://cns-wukongsport.com">悟空体育</a>的首页给人的第一印象是节制的——没有大幅弹窗，没有铺满屏幕的广告，标题与内容之间的节奏比较从容。
+    </p>
+    <p>
+      从运动资讯到赛事回顾，再到一些用户自发的讨论，整个站点的内容以“体育”为单一主线。对于只是想找个安静角落看看比赛结果或最新动态的人来说，这种专注反而成为了一种优势。
+    </p>
+  </div>
+
+  <!-- FAQ 摘要 -->
+  <div class="faq-summary">
+    <h2>一些常见问题 · 摘要</h2>
+
+    <div class="faq-item">
+      <div class="faq-question">这里的内容更新频率如何？</div>
+      <div class="faq-answer">主要体育赛事的赛程、比分以及相关短讯保持每日更新。非高峰时段也会补充专题文章或用户投稿。</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">是否需要注册才能浏览？</div>
+      <div class="faq-answer">大部分内容无需注册即可阅读。只有参与讨论或收藏内容时需要创建账号。具体规则在<a href="https://cns-wukongsport.com">悟空体育</a>页面中有说明。</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">体育种类偏向哪些？</div>
+      <div class="faq-answer">足球、篮球、网球、电竞等关注度较高的项目均有独立板块，同时保留了综合体育入口，方便探索小众赛事。</div>
+    </div>
+  </div>
+
+  <!-- 底部链接区 -->
+  <div class="footer-links">
+    <span><a href="https://cns-wukongsport.com">悟空体育</a></span>
+    <span>内容索引</span>
+    <span>常见问题</span>
+    <span>关于本站</span>
+    <div class="footer-meta">
+      一个基于体育内容的展示页面 · 信息仅供参考
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
